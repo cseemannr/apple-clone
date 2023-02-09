@@ -255,6 +255,11 @@ nav.active .shopping-icon {
   color: var(--grey3);
   font-family: inherit;
 }
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
 .search-icon {
   color: var(--grey3);
   font-size: 13px;
@@ -494,6 +499,7 @@ a:visited::after {
 
 button[data-action="stop"],
 button[data-action="start"] {
+  color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -752,6 +758,7 @@ footer a:visited::after {
 .ways-to-shop a:visited {
   color: var(--accent-light);
 }
+
 .rights {
   width: 100%;
   margin-top: 5px;
@@ -762,6 +769,7 @@ footer a:visited::after {
 .rights p,
 .rights ul {
   display: inline-flex;
+  flex-wrap: wrap;
 }
 .rights p {
   margin-right: 30px;
@@ -798,6 +806,7 @@ footer a:visited::after {
 
   .subhead {
     font-size: 24px;
+    padding: 0 22px;
   }
 
   .grid-item .subhead {
@@ -920,6 +929,7 @@ footer a:visited::after {
 
   .rights ul {
     margin-top: 5px;
+    margin-left: 0px;
   }
 
   .rights ul a:link,
@@ -1012,4 +1022,15 @@ footer a:visited::after {
   .control {
     display: block;
   }
+}
+
+@media (max-width: 320px) {
+  .rights ul {
+    justify-content: left;
+  }
+
+  button[data-action="stop"],
+button[data-action="start"] {
+  margin-right: 10px;
+}
 }
